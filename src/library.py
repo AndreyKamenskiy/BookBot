@@ -17,10 +17,10 @@ class Book:
         # Attributes
         self.title = ""
         self.description = ""
-        self.chapterts = {}
+        self.chapters = {}
 
     def GetChapterById(self, id):
-        return Chapter(self.chapterts[id]) # вернем копию главы, чтобы книгу не портить. Потом можно исправить.
+        return self.chapters[id] # исправить
     
     def TestBook(self):
         """checking that links in every element of the chapter is valid"""
