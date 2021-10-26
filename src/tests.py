@@ -64,7 +64,7 @@ def make_simple_book():
     book.chapters[ch.id] = ch
 
     ch = lib.Chapter()
-    ch.id = "lose2"
+    ch.id = "win"
     ch.elements = [lib.Element("Win. Ты победил! Крутышь! "),
                  lib.Element("✌"),
     ]

@@ -58,7 +58,8 @@ bot = telebot.TeleBot(tkn.BOT_TOKEN)
 @bot.callback_query_handler(func=lambda call: True)
 def callback_inline(call):
     global choise
-    if call.data in choise.keys:
+    if call.data in choise.keys():
+        bot.edit_message_text(chat_id=call.message.chat.id, message_id=call.message.message_id, text = call.message.text )
         show_chapter(call.message.chat.id, choise[call.data])
 
 
