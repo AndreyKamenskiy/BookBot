@@ -49,6 +49,13 @@ def reset_command(message):
 def unknown_command(message):
     bot.send_message(message.from_user.id, ini.UNKNOWN_COMMAND_MESSAGE)
 
+
+## Блок тестов
+
+import tests 
+book =tests.make_simple_book()
+
+
 ### Start book bot
 
 bot.polling(none_stop=True, interval=0)
